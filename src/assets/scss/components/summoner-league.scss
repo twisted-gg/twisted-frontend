@@ -1,0 +1,16 @@
+.summoner-league {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  p {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+  img {
+    width: 100%;
+    min-width: 50px;
+    max-width: 100px;
+  }
+}

@@ -1,0 +1,27 @@
+stages:
+  - deploy production
+  - deploy development
+
+variables:
+  BUCKET_NAME: www.redbuff.net
+  BUCKET_NAME_DEVELOP: develop.redbuff.net
+
+before_script:
+  - npm install
+  - npm run build
+
+production:
+  image: jtredoux/node-aws
+  stage: deploy production
+  only:
+    - master
+  script:
+    - aws s3 sync ./build s3://${BUCKET_NAME}
+
+development:
+  image: jtredoux/node-aws
+  stage: deploy development
+  only:
+    - develop
+  script:
+    - aws s3 sync ./build s3://${BUCKET_NAME_DEVELOP}

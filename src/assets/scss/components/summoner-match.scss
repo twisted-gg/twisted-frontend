@@ -1,0 +1,11 @@
+$championBackgroundSize: 46px;
+
+.summoner-match {
+  font-size: 10px;
+  .champion-image {
+    img {
+      border-radius: 50%;
+      width: $championBackgroundSize;
+    }
+  }
+}

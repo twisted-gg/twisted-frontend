@@ -1,0 +1,19 @@
+// Core variables and mixins overrides
+@import "../core/variables/variables";
+@import "~../core/variables/_variables.scss";
+
+$champion-icon-size: 35px;
+
+.champion-summoner-stat {
+  font-size: 10px;
+  margin-bottom: 1rem;
+  img {
+    border-radius: 50%;
+    width: $champion-icon-size;
+  }
+  .item {
+    p {
+      margin: 0 auto;
+    }
+  }
+}

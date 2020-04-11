@@ -1,0 +1,40 @@
+@import "../core/variables/_variables.scss";
+
+$profile-image-size: 120px;
+
+#summoner-profile {
+  #profile-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: $profile-image-size;
+      min-width: $profile-image-size;
+      border-radius: 50%;
+      padding-bottom: 1em;
+    }
+    .summoner-level {
+      position: absolute;
+      bottom: 0;
+      color: $white;
+      background-color: $gray-900;
+      border: 1px solid $border-color-color;
+      border-radius: 5px;
+      p {
+        padding: 0.3em 0.6em;
+        margin: 0 auto;
+      }
+    }
+  }
+  #summoner-name {
+    margin-top: 10px;
+    text-align: center;
+    h3 {
+      color: $white;
+    }
+    p {
+      margin: 0 auto;
+    }
+  }
+}

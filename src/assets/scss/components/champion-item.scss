@@ -1,0 +1,20 @@
+$championBackgroundSize: 82;
+
+.champion-item {
+  display: inline-block;
+  width: 90px;
+  padding: 2px;
+  text-align: center;
+}
+
+.background-champions {
+  background-image: url(https://cdn.redbuff.net/img/champions/champion82.png);
+}
+
+@for $i from 0 through 200 {
+  .champion-item-#{$i} {
+    background-position: 0 -#{$championBackgroundSize * $i}px;
+    width: #{$championBackgroundSize}px;
+    height: #{$championBackgroundSize}px;
+  }
+}
